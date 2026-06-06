@@ -1,0 +1,35 @@
+.image-rain {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.image-rain__particle {
+  position: absolute;
+  top: 0;
+  height: auto;
+  /* Match 0% keyframe so nothing peeks in before / during animation-delay */
+  transform: translateY(var(--start-y, -20vh)) translateX(0) rotate(0deg);
+  animation-name: image-rain-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  will-change: transform;
+}
+
+@keyframes image-rain-fall {
+  0% {
+    transform: translateY(var(--start-y, -20vh)) translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--drift)) rotate(var(--spin));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-rain {
+    display: none;
+  }
+}
