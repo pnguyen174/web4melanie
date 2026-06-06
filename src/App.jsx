@@ -1,9 +1,8 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
 import weddingImg from "./assets/wedding.JPG";
 import ImageRain from "./components/ImageRain";
 import "./App.css";
 import Chatbot from "./components/ChatBot";
+import hiImg from "./assets/hi.png";
 
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
             }}
           >
             <h1 style={{ margin: 0 }}>Hello My Melanie</h1>
-            <img src="/src/assets/hi.png" style={{ height: "6em" }} />
+            <img src={hiImg} style={{ height: "6em" }} />
           </div>
         </section>
 
