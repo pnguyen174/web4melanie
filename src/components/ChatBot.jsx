@@ -23,8 +23,10 @@ function getReplyForText(text) {
   if (match) return match.reply;
 
   if (lower.includes("love")) return "I love you too, bebe! 🥰";
-  if (lower.includes("hello") || lower.includes("hi"))
+
+  if (lower.includes("hello") || lower.includes("hi")) {
     return "Hey there cutie patootiee! 🩷";
+  }
 
   if (
     lower.includes("?") ||
@@ -35,8 +37,9 @@ function getReplyForText(text) {
     lower.includes("why") ||
     lower.includes("how") ||
     lower.includes("do")
-  )
+  ) {
     return "Good question! You might want to ask Peter!! 🥰";
+  }
 
   return defaultReply;
 }
@@ -45,12 +48,15 @@ export default function Chatbot() {
   const [messages, setMessages] = useState([
     { from: "bot", text: "Hi! What would you like to say?" },
   ]);
+
   const [input, setInput] = useState("");
-  const messagesEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
   useEffect(() => {
-    if (messages.length > 1) {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const container = messagesContainerRef.current;
+
+    if (container) {
+      container.scrollTop = container.scrollHeight;
     }
   }, [messages]);
 
@@ -68,6 +74,7 @@ export default function Chatbot() {
 
   function sendTypedMessage(e) {
     e.preventDefault();
+
     const text = input.trim();
     if (!text) return;
 
@@ -83,6 +90,7 @@ export default function Chatbot() {
         border: "1px solid var(--border)",
         borderRadius: 12,
         overflow: "hidden",
+        background: "#fff0f5",
       }}
     >
       <div
@@ -95,7 +103,9 @@ export default function Chatbot() {
       >
         💬 Ask me anything!
       </div>
+
       <div
+        ref={messagesContainerRef}
         style={{
           height: 320,
           overflowY: "auto",
@@ -142,8 +152,8 @@ export default function Chatbot() {
             </div>
           </div>
         ))}
-        <div ref={messagesEndRef} />
       </div>
+
       <div
         style={{
           padding: 12,
@@ -172,6 +182,7 @@ export default function Chatbot() {
           </button>
         ))}
       </div>
+
       <form
         onSubmit={sendTypedMessage}
         style={{
@@ -197,6 +208,7 @@ export default function Chatbot() {
             outline: "none",
           }}
         />
+
         <button
           type="submit"
           disabled={!input.trim()}

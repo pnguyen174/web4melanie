@@ -205,3 +205,133 @@
 
   background-position: right top, right 90px;
 }
+
+.countdown-card {
+  width: min(90vw, 520px);
+  margin: 24px auto;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.countdown-card h2 {
+  margin-top: 0;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.countdown div {
+  padding: 12px 8px;
+  border-radius: 14px;
+  background: rgba(255, 192, 203, 0.35);
+}
+
+.countdown strong {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.countdown span {
+  display: block;
+  font-size: 0.85rem;
+}
+
+#countdown {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#love-reasons {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.love-reasons-card {
+  width: min(90vw, 520px);
+  margin: 24px auto;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.love-reasons-card h2 {
+  margin-top: 0;
+}
+
+.love-reasons-card p {
+  min-height: 48px;
+  font-size: 1.05rem;
+}
+
+.love-button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 20px;
+  background: #ff8fab;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.love-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 143, 171, 0.45);
+}
