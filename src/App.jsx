@@ -48,6 +48,33 @@ function App() {
     "I love how caring you are.",
     "You make my life brighter.",
     "I am so lucky to have you.",
+    "You make me laugh when you are super goofy.",
+    "You make everyday together feel special.",
+    "You know how to make me feel loved.",
+    "You are my best friend and my favorite person to talk to.",
+    "You listen and make me feel understood.",
+    "You bring out the best in me.",
+    "You make life more fun.",
+    "You have the sweetest heart.",
+    "You make me excited for the future.",
+    "You are beautiful inside and out.",
+    "You make every moment better.",
+    "You are my comfort person.",
+    "You make me feel lucky every day.",
+    "You make me feel at home.",
+    "You are thoughtful in the little things.",
+    "You make me want to be better.",
+    "You are the best part of my day.",
+    "I am so proud of the woman you are.",
+    "You make even simple memories unforgettable even though I have short term memory.",
+    "You are everything I could have hoped for.",
+    "I love how much joy you bring into my life.",
+    "I love your patience with me.",
+    "I love how you make me feel calm when I am stressed.",
+    "I love how you make me feel wanted.",
+    "I love that I can be myself around you and be extra goofy.",
+    "I love the memories we have made together.",
+    "I love thinking about all the memories still ahead of us.",
   ];
 
   function getNextOccurrence(month, day) {
@@ -66,9 +93,9 @@ function App() {
   function getTimeLeft(event) {
     const now = new Date();
     const targetDate = getNextOccurrence(event.month, event.day);
-    let difference = targetDate - now;
+    const targetTime = targetDate.getTime();
+    let difference = targetTime - now.getTime();
 
-    // fix christmas offset
     if (event.title === "Christmas") {
       difference -= 1 * 60 * 60 * 1000;
     }
@@ -76,6 +103,7 @@ function App() {
     return {
       title: event.title,
       emoji: event.emoji,
+      targetTime,
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
       minutes: Math.floor((difference / (1000 * 60)) % 60),
@@ -84,7 +112,9 @@ function App() {
   }
 
   function getAllCountdowns() {
-    return countdownEvents.map((event) => getTimeLeft(event));
+    return countdownEvents
+      .map((event) => getTimeLeft(event))
+      .sort((a, b) => a.targetTime - b.targetTime);
   }
 
   function showRandomLoveReason() {
