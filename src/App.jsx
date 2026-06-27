@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import weddingImg from "./assets/wedding.JPG";
 import ImageRain from "./components/ImageRain";
+import PlacesMap from "./components/PlacesMap";
+import StoryBook from "./components/StoryBook";
 import "./App.css";
 import Chatbot from "./components/ChatBot";
 import hiImg from "./assets/hi.png";
@@ -70,7 +72,7 @@ function App() {
     "I love how you make me feel handsome.",
     "I love that I can be myself around you and be extra goofy.",
     "I love the memories we have made together.",
-    "I love thinking about all the memories still ahead of us.",
+    "Adventures with you fulfill my childhood dreams of traveling with the loml.",
   ];
 
   function getNextOccurrence(month, day) {
@@ -377,6 +379,14 @@ function App() {
               Give me a reason
             </button>
           </div>
+        </section>
+
+        <section id="places">
+          <PlacesMap />
+        </section>
+
+        <section id="storybook">
+          <StoryBook />
         </section>
       </div>
     </>
