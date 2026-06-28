@@ -17,24 +17,44 @@ const CHAPTERS = [
     text: `Once upon a time, at a sun-kissed university called Cal Poly, a boy named Peter spotted a girl who made his heart do something funny. With a deep breath and a hopeful heart, he did what any brave soul would do — he slid into her DMs. To his great delight, she wrote back, and just like that, without any fanfare or magic spell, the most important story of his life quietly began.`,
   },
   {
-    title: "Chapter II — The First Adventures",
+    title: "Chapter II — Dutch Courage",
     emoji: "☕",
-    text: `In those early, golden days, Peter and Melanie discovered that the most ordinary things felt extraordinary together. They sipped coffee and stole glances over textbooks, shared secret smiles over In-N-Out burgers, and lingered long past closing time at Giuseppe's. And at Night Creamery, with ice cream in hand and laughter in the air, Peter began to suspect that this girl was something very, very special.`,
+    text: `It started with coffee — as the best things often do. A Dutch Bros cup, a nervous smile, and two people pretending to be cooler than they felt. Peter had no idea, sitting across from her in the golden San Luis Obispo sun, that this would be the moment he'd look back on forever. She laughed at something he said, and he thought: oh no. I'm in trouble. The best kind of trouble there is.`,
   },
   {
-    title: "Chapter III — The Day It Became Official",
+    title: "Chapter III — No Tomatoes, Please",
+    emoji: "🍔",
+    text: `If the coffee was the spark, In-N-Out was the flame. They ordered, they sat, and somewhere between the first and second bite, Melanie called Peter out — no tomatoes, really? — with a grin that was equal parts teasing and tender. He was so nervous he could barely taste his food. But he laughed, and she laughed, and just like that the awkwardness melted away like cheese on a warm burger. Some dates you forget. This one, Peter knew, he never would.`,
+  },
+  {
+    title: "Chapter IV — Candlelight at Giuseppe's",
+    emoji: "🍝",
+    text: `Then came dinner at Giuseppe's — soft candlelight, the gentle clatter of a restaurant that felt made for slow evenings, and pasta that deserved every bit of its reputation. It was the kind of place that makes you want to linger. So they did. And at the end of the night, Melanie asked Peter if she could Venmo him for her half. He said no. She smiled. Neither of them would ever quite explain why that felt so right — only that it did, completely and without question.`,
+  },
+  {
+    title: "Chapter V — The Day It Became Official",
     emoji: "💕",
-    text: `On the 24th of May, 2023 — a day that deserves to be written in gold — Peter and Melanie made it official. It was the kind of moment that feels both surprising and inevitable all at once, like a favourite song reaching its chorus. From that day forward, they were no longer two separate stories, but one — and what a beautiful story it would turn out to be.`,
+    text: `On the 24th of May, 2023 — a day that deserves to be written in gold — Peter and Melanie made it official. It was the kind of moment that feels both surprising and inevitable all at once, like a favourite song finally reaching its chorus. From that day forward, they were no longer two separate stories, but one — and what a beautiful story it would turn out to be.`,
   },
   {
-    title: "Chapter IV — California, Together",
+    title: "Chapter VI — California, Together",
     emoji: "🌅",
-    text: `Hand in hand, they set out to explore the whole golden state as if it were made just for them. From the salty shores of San Diego to the foggy magic of the Bay Area, from the buzzing streets of LA to the wonder of the Exploratorium and the quiet awe of aquariums — they wandered through it all together. Over steaming bowls of Korean stew and lazy plates of Chinese food, over long car rides filled with music and inside jokes, California slowly became theirs.`,
+    text: `Hand in hand, they set out to explore the whole golden state as if it were made just for them. They chased sunsets at Avila Beach, sharing tacos with sandy feet and saltwater in their hair, promising each other they'd come back again and again. They wound down the coast to San Diego, windows down, music up, the Pacific glittering beside them the whole way. And in the Bay Area, they shared a meal with Rochelle and Sebastian — Korean food so good it made everyone at the table go quiet for a moment, the highest possible compliment.`,
   },
   {
-    title: "Chapter V — What Makes Her Magic",
+    title: "Chapter VII — Up, Up, and Away",
+    emoji: "✈️",
+    text: `Then came Seattle — their first flight together, their first step out of California as a pair. The city greeted them with its misty magic: the Space Needle disappearing into low clouds, the waterfront alive with colour and noise. But the real adventure was simpler than any landmark. It was the way Melanie reached for Peter's hand somewhere over the clouds, and he realised that any city in the world would feel like home as long as she was next to him. And then there was Haidilao — a bubbling, fragrant hot pot that Melanie couldn't believe she'd lived without. They ordered too much, ate every last bite, and vowed to return.`,
+  },
+  {
+    title: "Chapter VIII — Vegas, Baby",
+    emoji: "🎰",
+    text: `They went to Vegas with Melanie's family, and somewhere between the lights and the laughter and the sheer beautiful chaos of it all, Peter had a quiet realisation: he wasn't just in love with Melanie. He was in love with her whole world — the people who raised her, the family who shaped her, the warmth that followed her everywhere she went. The strip glittered, the night stretched long, and Peter thought there was nowhere on earth he'd rather be.`,
+  },
+  {
+    title: "Chapter IX — What Makes Her Magic",
     emoji: "⭐",
-    text: `Of all the wonderful things about Melanie — and there are many — it is the way she can be utterly, joyfully goofy one moment and deeply, quietly kind the next that makes Peter feel like the luckiest person alive. She has a sweetness that isn't performed, a warmth that fills every room she walks into, and a laugh that Peter never tires of hearing. Their story is still being written, chapter by beautiful chapter, and Peter cannot wait to see what comes next.`,
+    text: `Of all the wonderful things about Melanie — and there are many — it is the way she can be utterly, joyfully goofy one moment and deeply, quietly kind the next that makes Peter feel like the luckiest person alive. She has a sweetness that isn't performed, a warmth that fills every room she walks into, and a laugh that Peter never tires of hearing. From a Dutch Bros cup to the skies above Seattle, from the shores of Avila to the glow of Las Vegas at midnight — every chapter of this story has been better than the last. And the best part? It is still being written.`,
   },
 ];
 
@@ -135,7 +155,7 @@ export default function StoryBook() {
             fontFamily: "'Playfair Display', Georgia, serif",
           }}
         >
-          Our Story (work in progress)📖
+          Our Story (work in progress) 📖
         </h2>
         <p
           style={{
