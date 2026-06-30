@@ -5,6 +5,7 @@ import PlacesMap from "./components/PlacesMap";
 import StoryBook from "./components/StoryBook";
 import "./App.css";
 import Chatbot from "./components/ChatBot";
+import BearBuddy from "./components/BearBuddy";
 import hiImg from "./assets/hi.png";
 import photo1 from "./assets/p1.JPG";
 import photo2 from "./assets/p2.JPG";
@@ -137,7 +138,7 @@ function App() {
   return (
     <>
       <ImageRain count={rainCount} />
-
+      <BearBuddy />
       <div className="app-content">
         <section id="center">
           <div
