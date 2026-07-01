@@ -16,7 +16,7 @@ function BearBuddy() {
     target.current = { ...pos.current };
 
     const handleMove = (e) => {
-      target.current = { x: e.clientX - 35, y: e.clientY - 35 };
+      target.current = { x: e.clientX + 20, y: e.clientY + 20 };
     };
     window.addEventListener("mousemove", handleMove);
 
